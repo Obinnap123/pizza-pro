@@ -1039,3 +1039,55 @@ body {
 .nav-toggle.active .icon-close {
   display: inline;
 }
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1f2937;
+  --accent-color: #c53030;
+  --card-bg: #f9fafb;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+a,
+.btn {
+  color: var(--accent-color);
+}
+
+/* Apply theme variables to reusable elements */
+.header,
+.footer,
+.section,
+.menu-item,
+.service-card,
+.contact,
+.about,
+.gallery,
+.stats-grid {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+/* DARK MODE SUPPORT */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1f1f1f;
+    --text-color: #f9fafb;
+    --accent-color: #facc15;
+    --card-bg: #2c2c2c;
+  }
+
+  img {
+    filter: brightness(0.9);
+  }
+
+  h3,
+  .about-content .section-title,
+  .culinary-artistry,
+  .event {
+    color: #ffffff !important;
+  }
+}
